@@ -26,11 +26,11 @@ This chart bootstraps an aws-cluster-autoscaler deployment on a [Kubernetes](htt
 
 ## Installing the Chart
 
-In order for the chart to configure the aws-cluster-autoscaler properly during the installation process, you must provide some minimal configuration which can't rely on defaults. This includes at least one element in the `autoscalingGroups` array and its three values: `name`, `minSize` and `maxSize`. These parameters cannot be passed to helm using the `--set` parameter at this time, so you must supply these using a `values.yaml` file such as:
+In order for the chart to configure the aws-cluster-autoscaler properly during the installation process,  `ASGname`, `minSize` and `maxSize`. These parameters cannot be passed to helm using the `--set` parameter at this time, so you must supply these using a `values.yaml` file such as:
 
 ```
-autoscalingGroups:
-  - name: your-asg-name
+Change in Value.yaml
+    ASGname: your-asg-name
     maxSize: 10
     minSize: 1
 ```
