@@ -1,5 +1,5 @@
 ## Autoscaling group 
-ASGname: nodes.arristest.k8s.local
+ASGname: 
 maxSize: 8
 minSize: 2
 
