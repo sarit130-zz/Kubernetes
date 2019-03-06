@@ -1,0 +1,49 @@
+## Autoscaling group 
+ASGname: nodes.arristest.k8s.local
+maxSize: 8
+minSize: 2
+
+awsRegion: us-east-1
+
+image:
+  repository: gcr.io/google-containers/cluster-autoscaler
+  tag: v1.2.4
+  pullPolicy: IfNotPresent
+
+extraArgs: {}
+
+## Node labels for pod assignment
+## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+##
+nodeSelector: {}
+
+podAnnotations: {}
+replicaCount: 1
+
+resources: 
+  limits:
+    cpu: 100m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 300Mi
+
+rcount: 0
+error: info
+service:
+  annotations: {}
+  clusterIP: ""
+
+  ## List of IP addresses at which the service is available
+  ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
+  ##
+  externalIPs: []
+
+  loadBalancerIP: ""
+  loadBalancerSourceRanges: []
+  servicePort: 8085
+  type: ClusterIP
+
+skipNodes:
+  withLocalStorage: false
+  

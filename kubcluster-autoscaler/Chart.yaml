@@ -1,0 +1,7 @@
+apiVersion: v1
+description: Scales worker nodes within autoscaling groups.
+maintainers:
+- email: saritpant@gmail.com
+  name: Sarit Panta
+name: kubcluster-autoscaler
+version: 1.2.4
