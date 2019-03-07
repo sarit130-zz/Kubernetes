@@ -5,7 +5,7 @@ autoDiscovery:
 
 autoscalingGroups:
 # At least one element is required if not using autoDiscovery
-   - name: nodes.arristest.k8s.local
+   - name: 
      maxSize: 8
      minSize: 1
   # - name: asg2
